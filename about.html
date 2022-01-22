@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title> Parallax Scrolling Website</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <audio style="display: none;" loop="loop" preload="auto" controls="" autoplay>
+        <source src="music/Egyptian music.ogg" type="audio/ogg">
+        Tu navegador no soporta el elemento "audio".
+    </audio>
+
+</head>
+
+
+<body>
+    <header>
+        <a href="#" class="logo"> Moonlight</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </header>
+
+    <section>
+        <img src="images/about/estrellas.png" id="starsAbout" alt="">
+        <img src="images/about/nubesabout.png" id="nubesAbout" alt="">
+        <!-- <img src="images/NUBES3.png" id="nubesFondoAbout" alt="">-->
+        <img src="images/about/lunadenuevo.png" id="moonAbout" alt="">
+        <img src="images/about/piramides2.png" id="piramidesAbout" alt="">
+        <h2 id="text">Moon light</h2>
+        <a href="#" class="btn" id="btn"> Explore</a>
+        <img src="images/about/colinas atras.png" id="mountains_backgroundAbout" alt="">
+        <img src="images/about/colinas medio.png" id="mountains_middleAbout" alt="">
+        <img src="images/about/colinas frente.png" id="mountains_frontAbout" alt="">
+        <img src="images/about/colinas camellos.png" id="colinasCamellos" alt="">
+        <img src="images/about/camellos.png" id="camellos" alt="">
+    </section>
+
+    <div class="fondoArreglar">
+        <div class="sec" id="sec">
+            <div class="textoimagenAbout">
+                <h2>Sobre Moonlight</h2>
+
+                <div class="textoAbout">
+                    <p style="padding-top:5% ;"> En Moonlight nuestra mision es hacer de su estadia en Egipto la mejor
+                        experiencia. Somos una compañía de excursiones con mas de 20 años de trayectoria, y mas de 1000
+                        clientes satisfechos. Egipto es uno de los paises con el pasado historico mas importante de la
+                        humanidad, y que mejor que
+                        hacer de esta visita una de las mejores experiencias de su vida, y disfrutar de toda la riqueza
+                        historica de este lugar.
+                        <br><br> <br><br>
+
+                        Nuestros servicios incluyen: Tours en camello, visita a las magníficas Pirámides, excursión a
+                        uno de los bazares más importantes de El Cairo, shows en vivo con danzas y música típica,
+                        degustación gastronómica, entre otras actividades.
+                    </p>
+                </div>
+                <img class="imagenAbout" src="images/about/egipto3.png">
+            </div>
+        </div>
+    </div>
+    <script>
+        const starsAbout = document.getElementById('starsAbout');
+        const moonAbout = document.getElementById('moonAbout');
+        const mountains_behindAbout = document.getElementById('mountains_backgroundAbout');
+        const mountains_frontAbout = document.getElementById('mountains_frontAbout');
+        const mountains_middleAbout = document.getElementById('mountains_middleAbout');
+        const nubesAbout = document.getElementById('nubesAbout');
+        const piramidesAbout = document.getElementById('piramidesAbout');
+        const camellos = document.getElementById('camellos');
+        const text = document.getElementById('text');
+        const btn = document.getElementById('btn');
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+
+            moonAbout.style.top = value * 1.05 + 'px';
+            mountains_behindAbout.style.top = value * 1.4 + 'px';
+            piramidesAbout.style.top = value * 1 + 'px';
+            mountains_frontAbout.style.top = value * 0.1 + 'px';
+            mountains_middleAbout.style.top = value * 0.4 + 'px';
+            nubesAbout.style.left = value * 0.55 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 0 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+            starsAbout.style.left = value * 0.07 + 'px';
+            camellos.style.top = value * 0.1 + 'px';
+            camellos.style.left = value * -0.2 + 'px';
+
+
+
+
+        })
+    </script>
+</body>
+
+<!--  imagenes camellos  <a href='https://www.freepik.com/vectors/nature'>Nature vector created by brgfx - www.freepik.com</a>
+<a href='https://www.freepik.com/vectors/travel'>Travel vector created by upklyak - www.freepik.com</a>
+<a href='https://www.freepik.com/vectors/nature'>Nature vector created by upklyak - www.freepik.com</a>
+-->
+
+</html>

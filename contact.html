@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title> Parallax Scrolling Website</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <audio style="display: none;" loop="loop" preload="auto" controls="" autoplay>
+        <source src="music/Egyptian music.ogg" type="audio/ogg">
+        Tu navegador no soporta el elemento "audio".
+    </audio>
+
+
+    <script type="application/x-javascript">
+
+    function cargarImagen(){
+    ahora=new Date();
+    hora=ahora.getHours();
+    if(hora<8){
+    imagen="images/imagenCambioDia/morning.png";
+    }
+
+    if(hora>7 && hora<12){
+    imagen="images/imagenCambioDia/midday.png";
+    }
+    if(hora>11 && hora<18){
+    imagen="images/imagenCambioDia/afternoon.png";
+    }
+    if(hora>17 && hora<24){
+    imagen="images/imagenCambioDia/night.png";
+    }
+    document.images["reloj"].src=imagen;
+    }
+        </script>
+
+</head>
+
+
+<body onload="cargarImagen()">
+    <header>
+        <a href="#" class="logo"> Moonlight</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html" class="active ">Contact</a></li>
+        </ul>
+
+    </header>
+
+    <div id="infoContacto" style="position: fixed;z-index: 12;width: 100%; height: 100vh;margin-top: 22%;margin-left: 43.5%;">
+        <a href="mailto:moonlight@moonlight.com" id="mailMoonlight" >Email: moonlight@moonlight.com</a></div>
+    <section>
+        
+
+
+        <img src="images/imagenCambioDia/morning.png" name="reloj"> Imagen
+
+
+
+
+
+    </section>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title> Parallax Scrolling Website</title>
+    <link rel="stylesheet" type="text/css" href="css/workstyle.css">
+    
+    <audio style="display: none;" loop="loop" preload="auto" controls="" autoplay>
+        <source src="music/Egyptian music.ogg" type="audio/ogg">
+        Tu navegador no soporta el elemento "audio".
+    </audio>
+
+
+</head>
+
+
+<body>
+    <header>
+        <a href="#" class="logo"> Moonlight</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html" class="active">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </header>
+
+    <section>
+        <img src="images/work/ciudadWork.png" id="ciudadWork" alt="">
+        <img src="images/about/estrellas.png" id="starsWork" alt="">
+        <img src="images/work/lunaWork.png" id="moonWork" alt="">
+        <img src="images/work/cactusWork.png" id="cactusWork" alt="">
+        <h2 id="text">Moon light</h2>
+        <a href="#" class="btn" id="btn"> Explore</a>
+
+
+    </section>
+
+    <div class="fondoArreglar">
+        <div class="sec" id="sec">
+            <div class="textoimagenAbout">
+                <h2>Parallax Scrolling Effect</h2>
+
+                <div class="container">
+                    <div class="grid">
+                        <div class="item-grid">
+                            <div class="p-relative">
+                                <div>
+                                    <img src="images/about/egipto1.png" alt="">
+                                </div>
+                            </div>
+                            <a href="#modal1" data-toggle="modal" data-target="#modal1" class="hover modal-btn">
+                                Shows en vivo
+                            </a>
+                        </div>
+
+                        <div class="item-grid">
+                            <div class="p-relative">
+                                <div>
+                                    <img src="images/about/egipto2.png" alt="">
+                                </div>
+                            </div>
+                            <a href="#modal2" data-toggle="modal2" data-target="#modal2" class="hover modal-btn2">
+                               Bazar
+                            </a>
+                        </div>
+
+                        <div class="item-grid">
+                            <div class="p-relative">
+                                <div>
+                                    <img src="images/about/egipto3.png" alt="">
+                                </div>
+                            </div>
+                            <a href="#modal3" data-toggle="modal2" data-target="#modal3" class="hover modal-btn3">
+                                Paseo en camello
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!--===========================================DIVS OCULTAR===============================================-->
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal-bg" id="modal1">
+        <div class="modal">
+            <h2>Shows en vivo</h2>
+            <p>Vive la magia de la cultura egipcia, con su música y danzas típicas.</p>
+            <span class="modal-close">X</span>
+
+        </div>
+    </div>
+
+
+    <div class="modal-bg2" id="modal2">
+        <div class="modal">
+            <h2>Bazar</h2>
+            <p>¿Qué mejor que visitar uno de los bazares más importantes de El Cairo para conservar recuerdos de tu viaje? 
+                Puedes adquirir los más místicos artefactos y objetos de decoración en el bazar.
+            </p>
+            <span class="modal-close2">X</span>
+
+        </div>
+    </div>
+
+
+    <div class="modal-bg3" id="modal3">
+        <div class="modal">
+            <h2>Paseos en camello</h2>
+            <p>En un viaje a Egipto no puede faltar una de sus mayores atracciones paseo en camellos! Vive esta gran experiencia mientras 
+                recorres los rincones más misteriosos de este maravilloso país.
+            </p>
+            <span class="modal-close3">X</span>
+
+        </div>
+    </div>
+
+
+    <script>
+        const starsWork = document.getElementById('starsWork');
+        const moonWork = document.getElementById('moonWork');
+        const cactusWork = document.getElementById('cactusWork');
+        const ciudadWork = document.getElementById('ciudadWork');
+        const text = document.getElementById('text');
+        const btn = document.getElementById('btn');
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+
+            moonWork.style.top = value * 1.05 + 'px';
+            cactusWork.style.top = value * 0.1 + 'px';
+            ciudadWork.style.top = value * 0.4 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 0 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+            starsWork.style.left = value * 0.07 + 'px';
+
+
+        })
+    </script>
+
+
+</body>
+<script src="script.js"></script>
+
+<!--  imagenes camellos  <a href='https://www.freepik.com/vectors/nature'>Nature vector created by brgfx - www.freepik.com</a>
+<a href='https://www.freepik.com/vectors/travel'>Travel vector created by upklyak - www.freepik.com</a>
+<a href='https://www.freepik.com/vectors/nature'>Nature vector created by upklyak - www.freepik.com</a>
+-->
+
+</html>

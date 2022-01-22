@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title> Parallax Scrolling Website</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <audio style="display: none;" loop="loop" preload="auto" controls="" autoplay>
+        <source src="music/Egyptian music.ogg" type="audio/ogg">
+        Tu navegador no soporta el elemento "audio".
+    </audio>
+</head>
+
+
+<body>
+    <header>
+        <a href="#" class="logo"> Moonlight</a>
+        <ul>
+            <li><a href="index.html" class="active ">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </header>
+
+    <section>
+        <img src="images/STARS.png" id="stars" alt="">
+        <img src="images/NUBES3.png" id="nubes" alt="">
+        <img src="images/NUBES3.png" id="nubesFondo" alt="">
+        <img src="images/LUNA4.png" id="moon" alt="">
+        <img src="images/PIRAMIDES 2.png" id="mountains_behind" alt="">
+        <h2 id="text">Moon light</h2>
+        <a href="#" class="btn" id="btn"> Explore</a>
+        <img src="images/COLINAS ATRAS.png" id="mountains_background" alt="">
+        <img src="images/COLINAS MEDIO.png" id="mountains_middle" alt="">
+        <img src="images/COLINAS ADELANTE.png" id="mountains_front" alt="">
+        <img src="images/CACTUS.png" id="cactus" alt="">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Moonlight : Excursiones en El Cairo </h2>
+        <p style="padding-top:5% ;" >Experimente lo mejor de El Cairo en un recorrido privado de un día
+            completo que abarca sitios antiguos, artefactos y un bullicioso bazar. Monta un camello por la
+            arena al lado de las pirámides en Giza y ve cara a cara con la enigmática Esfinge. Haga una
+            pausa para almorzar antes de visitar el Museo Egipcio y explore la impresionante colección de
+            artefactos, momias y tesoros reales con su guía. Luego continúe al bazar Khan el Khalili para
+            explorar exhibiciones vibrantes de telas, artesanías y antigüedades. <br><br><br>
+            <h4 id="tour">Tour privado de día completo por los destinos esenciales de El Cairo</h4>
+            <ul class="listaServicios">
+                <li>Explore los sitios antiguos y el museo egipcio
+            con un guía experimentado</li>
+                <li>Aprende sobre la historia y cultura de Egipto.</li>
+                <li>Disfruta de la
+            experiencia personalizada de un tour privado.</li>
+                <li>Encuentra recuerdos únicos en un bazar de renombre</li>
+                
+            </ul> 
+    
+        </div>
+
+        <script>
+            const stars=document.getElementById('stars');
+            const moon=document.getElementById('moon');
+            const mountains_behind=document.getElementById('mountains_background');
+            const mountains_front=document.getElementById('mountains_front');
+            const mountains_middle=document.getElementById('mountains_middle');
+            const nubes=document.getElementById('nubes');
+            const cactus= document.getElementById('cactus');
+            const text=document.getElementById('text');
+            const btn=document.getElementById('btn');
+            const header=document.querySelector('header');
+
+      window.addEventListener('scroll',function(){
+          let value= window.scrollY;
+          
+          moon.style.top= value*1.05+'px';
+          mountains_behind.style.top= value* 0.3+'px';
+          mountains_front.style.top= value* 0.5+'px';
+          nubes.style.left= value* 0.05+'px';
+          text.style.marginRight= value* 4+'px';
+          text.style.marginTop= value* 0+'px';
+          btn.style.marginTop= value* 1.5 +'px';
+          header.style.top=value* 0.5 +'px';
+
+
+
+
+        })
+      </script>
+</body>
+
+</html>
+
